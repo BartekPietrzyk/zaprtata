@@ -1,0 +1,124 @@
+/* Podstawowe style dla całego body */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Nowy kontener, który będzie ograniczał szerokość strony */
+.wrapper {
+    width: 100%;
+    margin: 0 auto; /* Wyśrodkowanie na większych ekranach */
+}
+
+/* Obrazki w tle (jako elementy HTML) */
+.background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.First, .Second {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Pozycjonowanie i stylizacja tekstu */
+.invit-container {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+}
+
+.invit2-container {
+    position: absolute;
+    bottom: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+}
+
+.invit, .invit2 {
+    color: #2196F3;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+    font-size: 40px;
+    margin: 0;
+}
+
+.invitation-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    color: #2196F3;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.text {
+    font-size: 25px;
+    margin-top: 0;
+}
+
+.name {
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.data, .church, .rezident {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease;
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.diner {
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+.data:hover, .church:hover, .rezident:hover {
+    transform: scale(1.1);
+}
+
+/* Media Query dla większych ekranów (powyżej 590px) */
+
+@media (min-width: 590px) {
+    .wrapper {
+        max-width: 590px;
+    }
+
+    .invitation-container {
+        width: 80%;
+    }
+}
+
+/* Media Query dla telefonów (maksymalna szerokość 768px) */
+@media (max-width: 768px) {
+    /* ... (inne style dla telefonu) ... */
+
+    .data, .church, .rezident {
+        display: inline-block; /* Nowa, kluczowa zmiana */
+        border-bottom: 1px solid #2196F3;
+        text-decoration: none;
+        padding-bottom: 2px;
+        margin-top: 20px; /* Przywracamy margines, jeśli potrzebny */
+    }
+}
