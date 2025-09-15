@@ -41,7 +41,7 @@ body {
 
 .invit2-container {
     position: absolute;
-    bottom: 100px;
+    bottom: 80px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
